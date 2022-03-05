@@ -10,14 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.0.0/css/all.css">
 </head>
 <body>
     <div class="hero">
         <nav>
-            <img src="images/logo.png" class="logo">
-            <ul>
-                <li><a href=""></a>HOME</li>
-            </ul>
+            <a href="index.html"><img src="images/logo.png" class="logo"></a>
+            
+            <div class="nav-link" id="navLink">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <h1>Hello World</h1>
@@ -37,5 +45,15 @@
     </div>
 
 
+
+    <script>
+        var navLink = document.getElementById("navLink");
+        function showMenu() {
+            navLink.style.right = "0";
+        }
+        function hideMenu() {
+            navLink.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
